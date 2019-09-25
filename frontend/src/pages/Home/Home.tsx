@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 
 import { HomeContainer, ScoreBarContainer, NameContainer } from './Home.style';
 import ScoreBar from 'components/ScoreBar';
+import { UsersType } from 'redux/Users/types';
 
 interface Props {
-  users: { username: string; level: number }[];
+  users: Readonly<UsersType>;
   fetchUsers: () => void;
 }
 

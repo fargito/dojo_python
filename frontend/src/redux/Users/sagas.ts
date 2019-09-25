@@ -2,7 +2,6 @@ import { call, put, takeEvery } from 'redux-saga/effects';
 import { ActionType, getType } from 'typesafe-actions';
 import { makeGetRequest } from 'services/networking/request';
 
-import client from 'services/networking/client';
 import { fetchUsers } from './actions';
 
 // worker Saga: will be fired on USER_FETCH_REQUEST actions

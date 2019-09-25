@@ -1,29 +1,20 @@
 import styled from 'styled-components';
-import {
-  borderRadius,
-  colorUsage,
-  fontFamily,
-  fontSize,
-  fontWeight,
-  getSpacing,
-  lineHeight,
-} from 'stylesheet';
+import { getSpacing } from 'stylesheet';
 
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${getSpacing(10)};
 `;
 HomeContainer.displayName = 'HomeContainer';
 
 export const ScoreBarContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 export const NameContainer = styled.div`
-  width: 100px;
+  width: 150px;
   margin-right: 10px;
 `;

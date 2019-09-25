@@ -4,10 +4,11 @@ import { fontSize, getSpacing } from 'stylesheet';
 export const HeaderContainer = styled.header`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: ${getSpacing(13)};
   padding: 0 ${getSpacing(4)};
+  margin-bottom: ${getSpacing(4)};
   font-size: ${fontSize.large};
 `;
 

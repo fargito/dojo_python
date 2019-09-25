@@ -2,24 +2,10 @@ import { connect } from 'react-redux';
 import Home from './Home';
 import { Dispatch } from 'redux';
 import { fetchUsers } from 'redux/Users/actions';
+import { RootState } from 'redux/types';
 
-const usersMock = [
-  {
-    username: 'Le grand Fargito',
-    level: 1,
-  },
-  {
-    username: 'Jojo la brute',
-    level: 2,
-  },
-  {
-    username: 'El gran Fargito',
-    level: 3,
-  },
-];
-
-const mapStateToProps = () => ({
-  users: usersMock,
+const mapStateToProps = (state: RootState) => ({
+  users: state.users,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({

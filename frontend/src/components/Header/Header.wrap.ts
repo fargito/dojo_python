@@ -8,16 +8,9 @@ import { RootState } from 'redux/types';
 import { PATHS } from 'routes';
 import Header from './Header';
 
-const mapStateToProps = (state: RootState) => ({
-  isUserLoggedIn: !!getUserToken(state),
-});
+const mapStateToProps = (state: RootState) => ({});
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  logout: () => {
-    dispatch(logoutUser);
-    dispatch(push(PATHS.LOGIN));
-  },
-});
+const mapDispatchToProps = (dispatch: Dispatch) => ({});
 
 export default connect(
   mapStateToProps,
