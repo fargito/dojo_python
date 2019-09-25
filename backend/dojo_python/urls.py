@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
-
 from dojo_python.views import health
 
 admin.site.site_title = "Dojo Python Site Admin"
@@ -28,6 +27,7 @@ urlpatterns = [
     path("auth/", include("djoser.urls")),
     path("auth/", include("djoser.urls.jwt")),
     path("health", health, name="health"),
+    path('api/', include('riddles.urls')),
     path("", include("front.urls")),  # Keep this line last
 ]
 
