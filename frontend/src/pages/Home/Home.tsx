@@ -1,10 +1,19 @@
 import * as React from 'react';
-import { HomeContainer } from './Home.style';
+import { HomeContainer, ScoreBarContainer, NameContainer } from './Home.style';
 import ScoreBar from 'components/ScoreBar';
 
-const Home: React.FunctionComponent = () => (
+interface Props {
+  users: { username: string; score: number }[];
+}
+
+const Home: React.FunctionComponent<Props> = ({ users }) => (
   <HomeContainer>
-    <ScoreBar />
+    {users.map(user => (
+      <ScoreBarContainer>
+        <NameContainer>{user.username}</NameContainer>
+        <ScoreBar score={user.score} />
+      </ScoreBarContainer>
+    ))}
   </HomeContainer>
 );
 

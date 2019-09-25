@@ -11,27 +11,18 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const ActivePoint = styled.div`
+export const Point = styled.div<{ isActive: boolean }>`
   background-color: ${innerColor};
   border: ${scale * 2}px solid ${borderColor};
-  width: ${scale * 20}px;
+  width: ${({ isActive }) => (isActive ? scale * 20 : scale * 10)}px;
   border-radius: 50%;
-  height: ${scale * 20}px;
+  height: ${({ isActive }) => (isActive ? scale * 20 : scale * 10)}px;
   content: '';
 `;
 
-export const Point = styled.div`
-  background-color: ${innerColor};
-  border: ${scale * 2}px solid ${borderColor};
-  width: ${scale * 10}px;
-  border-radius: 50%;
-  height: ${scale * 10}px;
-  content: '';
-`;
-
-export const Bar = styled.div`
+export const Bar = styled.div<{ isActive: boolean }>`
   background-color: ${borderColor};
-  width: ${scale * 100}px;
+  width: ${({ isActive }) => (isActive ? scale * 45 : scale * 50)}px;
   height: ${scale * 3}px;
   content: '';
 `;
