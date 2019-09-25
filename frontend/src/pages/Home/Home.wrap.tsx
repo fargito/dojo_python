@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import Home from './Home';
+import { Dispatch } from 'redux';
+import { fetchUsers } from 'redux/Users/actions';
 
 const usersMock = [
   {
@@ -20,9 +22,9 @@ const mapStateToProps = () => ({
   users: usersMock,
 });
 
-function mapDispatchToProps() {
-  return {};
-}
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  fetchUsers: () => dispatch(fetchUsers.request({})),
+});
 
 export default connect(
   mapStateToProps,
