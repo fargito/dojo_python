@@ -8,7 +8,7 @@ import { flattenMessages } from 'services/i18n/intl';
 import enMessages from 'translations/en.json';
 import frMessages from 'translations/fr.json';
 
-import { PageContent, RootContainer } from './Root.style';
+import { RootContainer } from './Root.style';
 
 const locales = {
   fr: flattenMessages(frMessages),
@@ -25,7 +25,7 @@ const Root: React.FunctionComponent<Props> = ({ children }) => (
   <IntlProvider locale="fr" messages={locales.fr}>
     <RootContainer>
       <Header />
-      <PageContent>{children}</PageContent>
+      {children}
     </RootContainer>
   </IntlProvider>
 );
