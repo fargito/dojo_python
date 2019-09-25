@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # Our apps
     "front",
     "core",
+    "riddles",
 ]
 
 AUTHENTICATION_BACKENDS = [
