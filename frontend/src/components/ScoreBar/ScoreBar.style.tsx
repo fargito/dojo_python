@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const innerColor = '#3c9d9b';
 const borderColor = '#52de97';
 
+const innerActiveColor = '#c93838';
+const borderActiveColor = '#512c62';
+
 const scale = 1;
 
 export const Container = styled.div`
@@ -12,8 +15,8 @@ export const Container = styled.div`
 
 export const FirstPoint = styled.div<{ isActive: boolean }>`
   position: relative;
-  background-color: ${innerColor};
-  border: ${scale * 2}px solid ${borderColor};
+  background-color: ${({ isActive }) => (isActive ? innerActiveColor : innerColor)};
+  border: ${scale * 2}px solid ${({ isActive }) => (isActive ? borderActiveColor : borderColor)};
   width: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
   border-radius: 50%;
   height: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
@@ -23,8 +26,8 @@ export const FirstPoint = styled.div<{ isActive: boolean }>`
 
 export const Point = styled.div<{ isActive: boolean }>`
   position: relative;
-  background-color: ${innerColor};
-  border: ${scale * 2}px solid ${borderColor};
+  background-color: ${({ isActive }) => (isActive ? innerActiveColor : innerColor)};
+  border: ${scale * 2}px solid ${({ isActive }) => (isActive ? borderActiveColor : borderColor)};
   width: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
   border-radius: 50%;
   height: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
