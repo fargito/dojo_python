@@ -4,15 +4,15 @@ import Home from './Home';
 const usersMock = [
   {
     username: 'Le grand Fargito',
-    score: 1,
+    level: 1,
   },
   {
     username: 'Jojo la brute',
-    score: 2,
+    level: 2,
   },
   {
     username: 'El gran Fargito',
-    score: 3,
+    level: 3,
   },
 ];
 

@@ -3,7 +3,7 @@ import { HomeContainer, ScoreBarContainer, NameContainer } from './Home.style';
 import ScoreBar from 'components/ScoreBar';
 
 interface Props {
-  users: { username: string; score: number }[];
+  users: { username: string; level: number }[];
 }
 
 const Home: React.FunctionComponent<Props> = ({ users }) => (
@@ -11,7 +11,7 @@ const Home: React.FunctionComponent<Props> = ({ users }) => (
     {users.map(user => (
       <ScoreBarContainer>
         <NameContainer>{user.username}</NameContainer>
-        <ScoreBar score={user.score} />
+        <ScoreBar level={user.level} />
       </ScoreBarContainer>
     ))}
   </HomeContainer>
