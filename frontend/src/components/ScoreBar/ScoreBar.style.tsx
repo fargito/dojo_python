@@ -10,6 +10,17 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const FirstPoint = styled.div<{ isActive: boolean }>`
+  position: relative;
+  background-color: ${innerColor};
+  border: ${scale * 2}px solid ${borderColor};
+  width: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
+  border-radius: 50%;
+  height: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
+  margin-left: ${({ isActive }) => (isActive ? 0 : scale * 8)}px;
+  content: '';
+`;
+
 export const Point = styled.div<{ isActive: boolean }>`
   position: relative;
   background-color: ${innerColor};
@@ -22,7 +33,7 @@ export const Point = styled.div<{ isActive: boolean }>`
 
 export const Bar = styled.div<{ isActive: boolean }>`
   background-color: ${borderColor};
-  width: ${({ isActive }) => (isActive ? scale * 70 : scale * 75)}px;
+  width: ${({ isActive }) => (isActive ? scale * 63 : scale * 70)}px;
   height: ${scale * 3}px;
   content: '';
 `;
