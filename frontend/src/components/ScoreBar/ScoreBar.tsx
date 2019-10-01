@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Point, Bar, Level, FirstPoint } from './ScoreBar.style';
+import { Container, Point, Bar, Level, FirstPoint, LastPoint } from './ScoreBar.style';
 
 interface Props {
   level: number;
@@ -25,9 +25,9 @@ const ScoreBar: React.FunctionComponent<Props> = ({ levelCount = 6, level }) => 
         </>
       ))}
       <Bar isActive={level === levelCount} />
-      <Point isActive={level === levelCount}>
+      <LastPoint isActive={level === levelCount}>
         <Level isActive={level === levelCount}>{levelCount}</Level>
-      </Point>
+      </LastPoint>
     </Container>
   );
 };

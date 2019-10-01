@@ -24,6 +24,17 @@ export const FirstPoint = styled.div<{ isActive: boolean }>`
   content: '';
 `;
 
+export const LastPoint = styled.div<{ isActive: boolean }>`
+  position: relative;
+  background-color: ${({ isActive }) => (isActive ? innerActiveColor : innerColor)};
+  border: ${scale * 2}px solid ${({ isActive }) => (isActive ? borderActiveColor : borderColor)};
+  width: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
+  border-radius: 50%;
+  height: ${({ isActive }) => (isActive ? scale * 30 : scale * 16)}px;
+  margin-right: ${({ isActive }) => (isActive ? 0 : scale * 7)}px;
+  content: '';
+`;
+
 export const Point = styled.div<{ isActive: boolean }>`
   position: relative;
   background-color: ${({ isActive }) => (isActive ? innerActiveColor : innerColor)};

@@ -5,7 +5,6 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 `;
 HomeContainer.displayName = 'HomeContainer';
 
@@ -13,6 +12,8 @@ export const ScoreBarContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  width: 100%;
+  justify-content: space-around;
 `;
 
 export const NameContainer = styled.div`
