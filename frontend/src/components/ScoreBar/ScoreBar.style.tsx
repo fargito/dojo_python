@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const innerColor = '#3c9d9b';
 const borderColor = '#52de97';
 
-const innerActiveColor = '#c93838';
-const borderActiveColor = '#512c62';
+const innerActiveColor = '#f6f078';
+const borderActiveColor = '#01d28e';
 
 const scale = 1;
 
